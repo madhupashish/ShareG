@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Sharing Website - New Page with Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW4V0WSVR04weDut_4vnLeBYRZTDcbYtw&libraries=places"></script>
+</head>
+<body>
+    <h1>Welcome to the ShareG- New Page with Map</h1>
+    <p>Here is some content on the new page.</p>
+    <p>This is where you can add information about your car sharing service and any other relevant details.</p>
+
+    <!-- Your map container -->
+    <div id="map" style="height: 400px;"></div>
+
+    <script>
+        function initMap() {
+            // Specify the initial position and options for the map
+            var mapOptions = {
+                center: { lat: 40.7128, lng: -74.0060 }, // New York City coordinates
+                zoom: 12 // Set the initial zoom level (you can adjust this value)
+            };
+
+            // Create the map instance
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+    </script>
+
+    <script>
+        // Load the map after the Google Maps API has been loaded
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+</body>
+</html>
